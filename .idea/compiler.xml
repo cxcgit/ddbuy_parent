@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="com_common_interface" />
+        <module name="ddbuy_common_dao" />
+        <module name="ddbuy_common_entity" />
+        <module name="ddbuy_common_service" />
+        <module name="ddbuy_manager_web" />
+        <module name="ddbuy_protocal_web" />
+        <module name="ddbuy_search_wed" />
+        <module name="ddbuy_tset_web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="com_common_dao" target="1.8" />
+      <module name="ddbuy_common_interface" target="1.8" />
+      <module name="ddbuy_product_web" target="1.8" />
+      <module name="ddbuy_search_web" target="1.8" />
+      <module name="ddbuy_tset_web" target="1.8" />
+      <module name="demo" target="1.8" />
+      <module name="springcloud-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    $(function () {
+        $.post('/getAllTbContent',function (data) {
+            var temp='';
+            for (var i = 0; i<data.length ; i++) {
+                temp=temp+'<li><img src="'+data[i].pic+'" width="740" height="401" /></li>';
+            }
+            $("#ul").append(temp)
+        },'json')
+    })
+
+</script>
+<div class="top_slide_wrap">
+    <ul class="slide_box bxslider" id="ul">
+
+    </ul>
+    <div class="op_btns clearfix">
+        <a href="#" class="op_btn op_prev"><span></span></a>
+        <a href="#" class="op_btn op_next"><span></span></a>
+    </div>
+</div>
+</body>
+</html>

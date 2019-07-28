@@ -218,4 +218,7 @@
       ishot = #{ishot,jdbcType=TINYINT}
     where id = #{id,jdbcType=BIGINT}
   </update>
+  <select id="selectProduct" resultType="com.ddbuy.util.Product">
+    select id pid,title,image,price from tb_item
+  </select>
 </mapper>

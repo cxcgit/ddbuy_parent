@@ -10,6 +10,14 @@
     <packaging>jar</packaging>
     <artifactId>ddbuy_common_entity</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.solr</groupId>
+            <artifactId>solr-solrj</artifactId>
+            <version>7.2.0</version>
+        </dependency>
+
+    </dependencies>
 
 
 </project>

@@ -162,8 +162,8 @@
 <div class="top">
     <div class="logo"><a href="Index.html"><img src="images/logo.png" /></a></div>
     <div class="search">
-    	<form>
-        	<input type="text" value="" class="s_ipt" />
+    	<form  method="post" action="http://localhost:8083/search" >
+        	<input type="text" class="s_ipt" name="title"/>
             <input type="submit" value="搜索" class="s_btn" />
         </form>                      
         <span class="fl"><a href="#">咖啡</a><a href="#">iphone 6S</a><a href="#">新鲜美食</a><a href="#">蛋糕</a><a href="#">日用品</a><a href="#">连衣裙</a></span>
@@ -462,14 +462,16 @@
 </div>
 <!--End Menu End-->
 <script type="text/javascript">
-    var temp='';
+    $(function () {
+        var temp='';
         $.post('/getAllTbContent',function (data) {
-
             for (var i = 0; i<data.length ; i++) {
                 temp='<li><img src="'+data[i].pic+'" width="740" height="401" /></li>';
             }
             $("#ul").html(temp)
         },'json')
+    })
+
 </script>
 <div class="i_bg bg_color">
 	<div class="i_ban_bg">
@@ -1373,7 +1375,7 @@
     <div class="logo"><a href="${ctx}/Home?action=index"><img src="${ctx}/statics/images/logo.png"></a></div>
     <div class="search">
         <form>
-            <input txype="text" value="" class="s_ipt">
+            <input txype="text" value="" class="s_ipt" name="title">
             <input type="submit" value="搜索" class="s_btn">
         </form>
         <span class="fl">

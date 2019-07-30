@@ -1,7 +1,7 @@
 package com.ddbuy.service;
 
 import com.ddbuy.entity.TbContent;
-import com.ddbuy.entity.TbContentExample;
+
 
 import java.util.List;
 
@@ -14,5 +14,5 @@ import java.util.List;
 public interface TbContentService {
     int addTbContent(TbContent tbContent);
 
-    List<TbContent> selectByExample();
+    List<TbContent> selectAllContent();
 }

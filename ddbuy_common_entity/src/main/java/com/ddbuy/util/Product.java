@@ -2,13 +2,15 @@ package com.ddbuy.util;
 
 import org.apache.solr.client.solrj.beans.Field;
 
+import java.io.Serializable;
+
 /**
  * @author caixincheng
  * @Classname Product
  * @Date 2019-07-28 22:18
  * @Created by cxc
  */
-public class Product {
+public class Product implements Serializable {
     @Field
     private Long pid;
     @Field

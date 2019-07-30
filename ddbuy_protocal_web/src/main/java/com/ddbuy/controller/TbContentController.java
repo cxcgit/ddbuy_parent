@@ -23,7 +23,7 @@ public class TbContentController {
     @RequestMapping("/getAllTbContent")
     @ResponseBody
     public List<TbContent> getAllTbContent(){
-
-        return tbContentService.selectByExample();
+        System.out.println(1);
+        return tbContentService.selectAllContent();
     }
 }

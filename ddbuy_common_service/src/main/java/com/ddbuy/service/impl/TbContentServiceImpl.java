@@ -1,6 +1,7 @@
 package com.ddbuy.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
+
 import com.ddbuy.entity.TbContent;
 import com.ddbuy.entity.TbContentExample;
 import com.ddbuy.mapper.TbContentMapper;
@@ -20,7 +21,7 @@ import java.util.concurrent.TimeUnit;
  * @Created by cxc
  */
 @Component
-@Service(interfaceClass = TbContentService.class,version = "1.0.0",timeout = 1000)
+@Service(interfaceClass = TbContentService.class,version = "1.0.0",timeout = 3000)
 public class TbContentServiceImpl implements TbContentService {
     @Autowired
     private TbContentMapper tbContentMapper;
@@ -40,7 +41,7 @@ public class TbContentServiceImpl implements TbContentService {
      * @return
      */
     @Override
-    public List<TbContent> selectByExample() {
+    public List<TbContent> selectAllContent() {
         List<TbContent> list=null;
         ValueOperations<String, List<TbContent>> operations = redisTemplate.opsForValue();
         if (redisTemplate.hasKey("content")){
